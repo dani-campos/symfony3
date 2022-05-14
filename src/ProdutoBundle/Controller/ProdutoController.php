@@ -24,6 +24,8 @@ class ProdutoController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+
+        
         $produtos = $em->getRepository('ProdutoBundle:Produto')->findAll();
 
         return $this->render('produto/index.html.twig', array(
